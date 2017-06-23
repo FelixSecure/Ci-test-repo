@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="window" maxHeight="1024.0" maxWidth="768.0" minHeight="650.0" minWidth="768.0" prefHeight="650.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+		<Button fx:id="searchCustomer" disable="true" layoutX="204.0" layoutY="111.0" mnemonicParsing="false" text="Suchen" />
+		<TextField fx:id="customerId" disable="true" layoutX="39.0" layoutY="111.0" promptText="Kundennr." />
+		<TextField fx:id="articleQuantity" disable="true" layoutX="463.0" layoutY="231.0" prefHeight="25.0" prefWidth="66.0" promptText="Menge" />
+		<Button fx:id="addArticle" disable="true" layoutX="548.0" layoutY="231.0" mnemonicParsing="false" text="Hinzufügen" />
+		<Button fx:id="resetData" disable="true" layoutX="649.0" layoutY="598.0" mnemonicParsing="false" text="Zurücksetzen" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <VBox layoutX="33.0" layoutY="273.0" AnchorPane.bottomAnchor="177.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="273.0">
+         <children>
+      
+      
+      		<TableView fx:id="offerPositionTable" disable="true" prefHeight="200.0" prefWidth="703.0">
+      			<columns>
+      				<TableColumn fx:id="pos" prefWidth="64.5" text="Position" />
+					<TableColumn fx:id="artid" prefWidth="205.5" text="Artikelnummer" />
+      				<TableColumn fx:id="artname" prefWidth="205.5" text="Artikelbezeichnung" />
+      				<TableColumn fx:id="singleprice" prefWidth="87.5" text="Einzelpreis" />
+      				<TableColumn fx:id="amount" prefWidth="53.5" text="Anzahl" />
+      				<TableColumn fx:id="posprice" prefWidth="121.5" text="Positionspreis" />
+      			</columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+      		</TableView>
+         </children>
+      </VBox>
+		<Label fx:id="Kundendaten" layoutX="39.0" layoutY="87.0" text="Kundendaten:" wrapText="true">
+			<font>
+				<Font name="System Italic" size="12.0" />
+			</font>
+		</Label>
+		<Button fx:id="mainButton" disable="true" layoutX="571.0" layoutY="598.0" mnemonicParsing="false" text="Speichern" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="110.0" />
+		<Label fx:id="Price" layoutX="33.0" layoutY="495.0" text="Gesamtpreis:" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="33.0">
+			<font>
+				<Font name="System Bold" size="16.0" />
+			</font>
+		</Label>
+		<TextField fx:id="totalSum" disable="true" editable="false" layoutX="31.0" layoutY="535.0" promptText="Gesamtpreis" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="31.0" />
+		<MenuBar fx:id="offerMenu" layoutX="-9.0" layoutY="2.0" maxHeight="25.0" maxWidth="768.0" prefHeight="25.0" prefWidth="768.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<menus>
+				<Menu mnemonicParsing="false" text="Datei">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Beenden" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Bearbeiten">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Neu" />
+						<MenuItem mnemonicParsing="false" text="Anzeigen" />
+						<MenuItem mnemonicParsing="false" text="Löschen" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+		<TextField fx:id="offerId" disable="true" layoutX="39.0" layoutY="49.0" promptText="Angebotsnr." />
+		<Button fx:id="searchOffer" disable="true" layoutX="205.0" layoutY="49.0" mnemonicParsing="false" text="Suchen" />
+		<TextField fx:id="customerName" disable="true" editable="false" layoutX="301.0" layoutY="112.0" AnchorPane.leftAnchor="301.0" />
+		<Label layoutX="301.0" layoutY="87.0" text="Name:" />
+		<Label layoutX="466.0" layoutY="86.0" text="Anschrift:" />
+		<TextField fx:id="customerAddress" disable="true" editable="false" layoutX="463.0" layoutY="112.0" prefHeight="25.0" prefWidth="295.0" AnchorPane.leftAnchor="463.0" AnchorPane.topAnchor="112.0" />
+		<Label layoutX="39.0" layoutY="147.0" text="Artikeldaten:">
+			<font>
+				<Font name="System Italic" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="articleId" disable="true" layoutX="39.0" layoutY="170.0" promptText="Artikelnr." />
+		<Button fx:id="searchArticle" disable="true" layoutX="205.0" layoutY="170.0" mnemonicParsing="false" text="Suchen" />
+		<TextField fx:id="articleName" disable="true" editable="false" layoutX="301.0" layoutY="169.0" AnchorPane.leftAnchor="301.0" />
+		<TextField fx:id="articlePrice" disable="true" editable="false" layoutX="463.0" layoutY="169.0" prefHeight="25.0" prefWidth="85.0" AnchorPane.leftAnchor="463.0" />
+		<TextField fx:id="uom" disable="true" editable="false" layoutX="301.0" layoutY="231.0" prefHeight="25.0" prefWidth="49.0" text="Stück" />
+		<Label layoutX="301.0" layoutY="147.0" text="Artikelbezeichung:" />
+		<Label layoutX="463.0" layoutY="147.0" text="Preis:" />
+		<Label layoutX="301.0" layoutY="209.0" text="Mengeneinheit:" />
+		<Label layoutX="463.0" layoutY="209.0" text="Gewünschte Menge:" />
+		<Label layoutX="188.0" layoutY="535.0" text="€" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="188.0">
+			<font>
+				<Font name="System Bold" size="16.0" />
+			</font>
+		</Label>
+      <Button fx:id="deleteArticle" disable="true" layoutX="645.0" layoutY="231.0" mnemonicParsing="false" text="Löschen" />
+      <DatePicker fx:id="dateSetter" disable="true" layoutX="463.0" layoutY="49.0" />
+	</children>
+</AnchorPane>
